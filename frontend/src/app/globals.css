@@ -1,0 +1,156 @@
+@import "tailwindcss";
+
+:root {
+  --bg-primary: #0a0e1a;
+  --bg-secondary: #111827;
+  --bg-card: #1a1f35;
+  --bg-card-hover: #222845;
+  --bg-input: #151b2e;
+  --border-color: #2a3150;
+  --border-glow: #3b82f6;
+  --text-primary: #f1f5f9;
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
+  --accent-blue: #3b82f6;
+  --accent-cyan: #06b6d4;
+  --accent-violet: #8b5cf6;
+  --accent-green: #10b981;
+  --accent-red: #ef4444;
+  --accent-yellow: #f59e0b;
+  --gradient-primary: linear-gradient(135deg, #3b82f6, #8b5cf6);
+  --gradient-glow: linear-gradient(135deg, #06b6d4, #3b82f6, #8b5cf6);
+  --shadow-glow: 0 0 20px rgba(59, 130, 246, 0.15);
+  --shadow-card: 0 4px 24px rgba(0, 0, 0, 0.3);
+}
+
+@theme inline {
+  --color-background: var(--bg-primary);
+  --color-foreground: var(--text-primary);
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--border-color) transparent;
+}
+
+*::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 3px;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: var(--text-muted);
+}
+
+body {
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Glass morphism utility */
+.glass {
+  background: rgba(26, 31, 53, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(42, 49, 80, 0.6);
+}
+
+/* Glow border animation */
+.glow-border {
+  position: relative;
+  overflow: hidden;
+}
+
+.glow-border::before {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  background: var(--gradient-glow);
+  border-radius: inherit;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.glow-border:hover::before {
+  opacity: 1;
+}
+
+.glow-border::after {
+  content: '';
+  position: absolute;
+  inset: 1px;
+  background: var(--bg-card);
+  border-radius: inherit;
+  z-index: -1;
+}
+
+/* Status colors */
+.status-success { color: var(--accent-green); }
+.status-failed { color: var(--accent-red); }
+.status-running { color: var(--accent-blue); }
+.status-draft { color: var(--text-muted); }
+
+/* Pulse animation for running status */
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.4); }
+  50% { box-shadow: 0 0 0 8px rgba(59, 130, 246, 0); }
+}
+
+.pulse-running {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+/* Terminal styling */
+.terminal-text {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+/* Gradient text */
+.gradient-text {
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Animated background grid */
+.bg-grid {
+  background-image: 
+    linear-gradient(rgba(42, 49, 80, 0.3) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(42, 49, 80, 0.3) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* Input focus glow */
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  border-color: var(--accent-blue) !important;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+}
+
+/* Button hover lift */
+.btn-lift {
+  transition: all 0.2s ease;
+}
+
+.btn-lift:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.25);
+}
