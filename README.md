@@ -118,7 +118,7 @@ Monitoring & Logs
 
 ## Dashboard
 
-![Dashboard](Dashboard Screenshot)
+![Dashboard](https://github.com/rajatkamboj06/Major-II/blob/main/Dashboard%20Screenshot)
 
 ---
 
