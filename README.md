@@ -118,7 +118,7 @@ Monitoring & Logs
 
 ## Dashboard
 
-![Dashboard](./screenshots/dashboard.png)
+![Dashboard](Dashboard Screenshot)
 
 ---
 
