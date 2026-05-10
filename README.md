@@ -121,22 +121,29 @@ Monitoring & Logs
 ![Dashboard](https://github.com/rajatkamboj06/Major-II/blob/main/Dashboard%20Screenshot)
 
 ---
+## Pipelines 
 
+![Pipelines](https://github.com/rajatkamboj06/Major-II/blob/main/Pipelines%20SS%201)
+![Pipelines](https://github.com/rajatkamboj06/Major-II/blob/main/Pipelines%20SS%202)
+
+---
 ## Monitoring Dashboard
 
-![Monitoring](./screenshots/monitoring.png)
+![Monitoring](https://github.com/rajatkamboj06/Major-II/blob/main/Monitoring%20dashboard%20ss)
+![Monitoring](https://github.com/rajatkamboj06/Major-II/blob/main/Monitoring%20D.%20SS%202)
+
 
 ---
 
-## Deployment Logs
+## Execution Logs
 
-![Logs](./screenshots/logs.png)
+![Logs](https://github.com/rajatkamboj06/Major-II/blob/main/E.%20logs%20ss)
 
 ---
+## Live deployment page
 
-# 🎥 Demo
-
-![Demo](./screenshots/demo.gif)
+![live](https://github.com/rajatkamboj06/Major-II/blob/main/live%20p%20ss1)
+![live](https://github.com/rajatkamboj06/Major-II/blob/main/live%20P%20ss%202)
 
 ---
 
